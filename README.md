@@ -22,13 +22,25 @@ organize oque terá no seu menu de entrada.
 
 - input de login
 
+------------------------
+        login
+------------------------
+
 - input de senha
+
+------------------------
+        senha
+------------------------
 
 faça as camadas de proteção.
 
 proteção de borda - failfast (nulos, vazios, espaços)
 
 proteção de negocio(contém arroba, se é maior que 50)
+
+desenhar o layout, tornar visual o fluxo de dados.
+
+
 
 - arquitetar camadas
 
