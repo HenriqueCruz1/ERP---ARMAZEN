@@ -1,18 +1,16 @@
 Definição do que é?
 
-sistema de gestão.. 
+DEFINIÇÃO:
 
-integração entre os modulos da empresa
+Sistema de gestão que faz a intregração de inicialmente 3 modulos:
 
-cataloga entradas e saidas de estoque
+ => ESTOQUE
+ => COMPRAS
+ => FINANCEIRO  
 
-garante acertabilidade ..
+Documentação do processo de criação ta tela de login.
 
-descreva cada ordem de ação
-
-divida as tarefas
-
-+primeira tarefa:
++ primeira tarefa:
 
 construir de forma simples uma entrada de dados e direcione a uma lista que é seu banco de dados.
 
