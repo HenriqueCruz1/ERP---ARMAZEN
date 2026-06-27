@@ -8,15 +8,9 @@ Sistema de gestão que faz a intregração de inicialmente 3 modulos:
  => COMPRAS
  => FINANCEIRO  
 
-Documentação do processo de criação ta tela de login.
+Documentação do processo de criação na tela de login.
 
-+ primeira tarefa:
-
-construir de forma simples uma entrada de dados e direcione a uma lista que é seu banco de dados.
-
-+ segunda tarefa
-
-organize oque terá no seu menu de entrada.
+Organize oque terá no seu menu de entrada.
 
 - input de login
 
@@ -32,15 +26,13 @@ organize oque terá no seu menu de entrada.
 
 faça as camadas de proteção.
 
-proteção de borda - failfast (nulos, vazios, espaços)
+--- para não confundir eu criei funções distintas def verifica_senha, def verifica_email --- 
 
-proteção de negocio(contém arroba, se é maior que 50)
+Especificação de camadas teste // Projetando arquitetura de filtros. 
 
-desenhar o layout, tornar visual o fluxo de dados.
+1° proteção de borda - failfast (nulos, vazios, espaços)
 
+2° proteção de negocio(contém arroba, se é maior que 50)
 
-
-- arquitetar camadas
-
-core da aplicação (até que os dados estiverem seguros)
+3° permitir acesso ao core da aplicação (até que os dados estiverem seguros)
 

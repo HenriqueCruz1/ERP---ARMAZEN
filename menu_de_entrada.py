@@ -2,13 +2,13 @@ def verifica_email(email):
 
     email = input()
 
-    # Proteção de borda
-
     if email == None:
         return False
     
     if email == '':
         return False
+    
+    if email.split()
     
 print(verifica_email)
     
@@ -23,12 +23,6 @@ def verifica_senha(senha):
         return False
 
 print(verifica_senha)
-
-
-  #   Proteção de négocio
-
-
-#leia a string, verifique a existencia de um caractere especifico. 
 
 print(15*'-', 'EMAIL//LOGIN* ')
 
