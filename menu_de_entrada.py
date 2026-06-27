@@ -1,36 +1,42 @@
 def verifica_email(email):
 
-    email = input()
-
-    if email == None:
+    if email is None:
         return False
     
     if email == '':
         return False
     
-    if email.split()
+    if '@' not in email:
+        return False
     
-print(verifica_email)
+    if len(email) > 50:
+        return False
+
     
 def verifica_senha(senha):
 
-    senha = input()
-
-    if senha == None:
+    if senha is None:
         return False
     
     if senha == '':
         return False
+    
+    if '@' not in senha:
+        return False
+    
+    if len(senha) > 50:
+        return False
 
-print(verifica_senha)
+
 
 print(15*'-', 'EMAIL//LOGIN* ')
 
-verifica_email()
+print(verifica_email(email = input('Digite o e-mail: ')))
 
 print(15*'-', 'SENHA//LOGIN* ')
 
-verifica_senha()
+print(verifica_senha(senha = input('Digite a senha: ')))
+
     
 
 
