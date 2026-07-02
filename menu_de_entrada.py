@@ -1,41 +1,72 @@
-def verifica_email(email):
+def menu():
 
-    if email is None:
-        return False
+    print("\n", '='*20)
+    print('   SISTEMA DE ACESSO')
+    print('='*20)
+    print('1. Cadastrar novo usuário')
+    print('2. Fazer login')
+    print('3. Sair')
+    return input('Escolha uma opção: ')
+
+def cadastrar():
+
+    while True:
+
+        email = input('Digite o e-mail do novo usuário: ').strip()
     
-    if email == '':
-        return False
+        if email == '':
+            print('Retorne uma resposta valida.')
+            continue
     
-    if '@' not in email:
-        return False
+        if '@' not in email:
+            print('Retorne uma resposta valida.')
+            continue
     
-    if len(email) > 50:
-        return False
+        if len(email) > 50:
+            print('Retorne uma resposta valida.')
+            continue
 
+        break
+
+
+    while True:
+
+        senha = input('Digite a nova senha: ').strip()
     
-def verifica_senha(senha):
-
-    if senha is None:
-        return False
+        if senha == '':
+            print('Retorne uma resposta valida.')
+            continue
     
-    if senha == '':
-        return False
+        if len(senha) > 10:
+            print('Retorne uma resposta valida.')
+            continue
     
-    if '@' not in senha:
-        return False
-    
-    if len(senha) > 50:
-        return False
+        break
+
+def login():
+    print()
 
 
+def iniciar():
+    while True:
 
-print(15*'-', 'EMAIL//LOGIN* ')
+        opcao = menu()
 
-print(verifica_email(email = input('Digite o e-mail: ')))
+        if opcao == '1':
+            cadastrar()
 
-print(15*'-', 'SENHA//LOGIN* ')
+        elif opcao == '2':
+            login()
 
-print(verifica_senha(senha = input('Digite a senha: ')))
+        elif opcao == '3':
+            print('Encerrando programa...')
+            break
+        
+        else:
+            print('Opção inválida. Tente novamente.')
+iniciar()
+
+
 
     
 
