@@ -38,5 +38,7 @@ Especificação de camadas teste // Projetando arquitetura de filtros.
 
 Modelagem de dados:
 
-+ armazenar usuario em dicionario e analisar duplicatas (em andamento...)
++ O cadastro do úsuario, acesso e validação básica, foram implementados.
+
+++ Estou estudando formas de validação com hash e JWT.
 

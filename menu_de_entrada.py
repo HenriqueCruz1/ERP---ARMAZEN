@@ -1,4 +1,5 @@
-banco_de_usuarios = dict
+banco_de_usuarios = {
+}
 
 def menu():
 
@@ -20,7 +21,7 @@ def cadastrar():
             print('Esté campo não pode ficar vazio.')
             continue
 
-        if login in banco_de_usuarios['login']:
+        if login in banco_de_usuarios:
             print('Esté nome de usúario não está disponivel.')
             continue
 
@@ -32,46 +33,11 @@ def cadastrar():
             print('O nome do usuario não pode ter caracteres especiais')
             continue 
 
-        banco_de_usuarios['login'] = login
-
         break
-        
-        
-    #while True:
-#
-    #    email = str(input('Digite o e-mail do novo usuário: ')).strip()
-#
-    #    if email in Banco_de_dados:
-    #        print('O e-mail já está cadastrado em outra conta.')
-    #        continue
-    #
-    #    if email == '':
-    #        print('O campo não pode ficar vazio.')
-    #        continue
-    #
-    #    if '@' not in email:
-    #        print('E-mail invalido')
-    #        continue
-#
-    #    if '.com' not in email:
-    #        print('E-mail invalido')
-#
-    #    if len(email) > 50:
-    #        print('E-mail invalido')
-    #        continue
-    #    
-    #    Banco_de_dados.append(email)
-    #    break
-
-
 
     while True:
 
         senha = str(input('Digite a nova senha: ')).strip()
-
-        if senha in banco_de_usuarios:
-            print('Está senha não está disponivel.')
-            continue
     
         if senha == '':
             print('Esse campo não pode ficar vazio.')
@@ -81,7 +47,8 @@ def cadastrar():
             print('Digite uma senha valida; a senha deve ter entre 5 á 15 caracteres.')
             continue
         
-        banco_de_usuarios['senha'] = senha
+        banco_de_usuarios[login] = {'usuario': login,
+                                    'senha': senha}
 
         break
     print('\n')
@@ -102,10 +69,12 @@ def logar():
     while True:
         senha = input('Digite a senha. ').strip()
 
-        if senha not in banco_de_usuarios:
+        if senha != banco_de_usuarios[login]['senha']:
             print('Senha incorreta.')
+            continue
+        else:
 
-        break
+            break
     print('\n')
     print('++ Acesso permitido, SEJA BEM-VINDO! ++')
 
@@ -123,23 +92,10 @@ def iniciar():
 
         elif opcao == '3':
             print('Encerrando programa...')
+            print(banco_de_usuarios)
             break
         
         else:
             print('Opção inválida. Tente novamente.')
 iniciar()
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
 
