@@ -58,12 +58,5 @@ def remover_produto(estoque):
 remover_produto(estoque)
 listar_produtos(estoque)
 
-
-
-
-
-
-
-
-
-
+def atualizar_produto(estoque):
+    buscar_produto
