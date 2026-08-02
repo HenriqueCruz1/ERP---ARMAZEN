@@ -42,3 +42,5 @@ Modelagem de dados:
 
 ++ Estou estudando formas de validação com hash e JWT.
 
+++ estou fazendo o sistema de movimentação interna de saldo com um CRUD
+
