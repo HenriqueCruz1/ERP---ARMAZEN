@@ -25,6 +25,7 @@ def buscar_produto(estoque, nome):
         if produto['nome'].upper() == nome:
             return produto
         
+    print('Produto não encontrado!')
     return None
 
 
@@ -47,16 +48,22 @@ def cadastrar_produto(estoque):
 def remover_produto(estoque):
      
     print('**REMOVER PRODUTO**')
+
+    encontrado = False
      
     nome = input('Qual produto deseja remover? ').upper()
+
     for produto in estoque:
-          if produto['nome'].upper() == nome:
+        if produto['nome'].upper() == nome:
+            encontrado = True
             estoque.remove(produto) 
             print('Produto removido com sucesso!')
             break
 
+    if not encontrado:
+        print('Produto não encontrado no estoque')
 
-def atualizar_produto(estoque):
+def editar_produto(estoque):
 
     print('**ATUALIZAR PRODUTO**')
 

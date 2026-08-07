@@ -44,3 +44,7 @@ Modelagem de dados:
 
 ++ estou fazendo o sistema de movimentação interna de saldo com um CRUD
 
++ Quando a função busca uma informação no laço e retorna um valor sobre uma variavel use return, ela já vai encerrar a função caso encontre ou não a informação e entregar o valor final.
+
++ Quando a função só executa uma tarefa dentro do sistema (exp: atualiza ou remove um dado) use uma condicional true/false para a execução da ação.
+

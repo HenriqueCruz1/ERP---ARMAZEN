@@ -25,7 +25,7 @@ def menu():
         elif escolha_menu == 4:
              remover_produto(estoque)
         elif escolha_menu == 5:
-            atualizar_produto(estoque)
+            editar_produto(estoque)
         elif escolha_menu == 6:
             print('Saindo..')
             break
