@@ -1,4 +1,4 @@
-from FUNCTIONSCRUD import *
+from functions_produtos import *
 
 def menu():
 

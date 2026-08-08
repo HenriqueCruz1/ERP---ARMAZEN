@@ -29,12 +29,20 @@ def buscar_produto(estoque, nome):
 
 def cadastrar_produto(estoque):
 
-    print('**CADASTRAR PRODUTO**')
+    print('\n**CADASTRAR PRODUTO**\n')
 
-    nome = input('Nome do produto: ')
+    while True:
+        nome = input('Nome do produto: ')
+        if nome == '':
+            print('Este campo não pode ficar vazio')
+            continue
+        break
     while True:
         try:
             preco = float(input('Preço: '))
+            if preco < 0:
+                print('O valor não pode ser negativo!')
+                continue
             break
         except ValueError:
             print('Entrada invalida')

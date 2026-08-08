@@ -48,3 +48,39 @@ Modelagem de dados:
 
 + Quando a função só executa uma tarefa dentro do sistema (exp: atualiza ou remove um dado) use uma condicional true/false para a execução da ação.
 
+++ Task's of the day
+
+Teste de funções CRUD
+
+** Cadastro
+nome vazio (work in progress)
+preço inválido
+preço negativo
+quantidade inválida
+quantidade negativa
+
+** Busca
+produto existente
+produto inexistente
+maiúsculas/minúsculas
+entrada vazia
+
+** Edição
+produto existente
+produto inexistente
+preço/quantidade inválidos
+
+** Remoção
+existente
+inexistente
+estoque vazio
+
+** Listagem
+estoque com produtos
+estoque vazio
+
+** Menu
+opção válida
+opção inexistente
+entrada que não seja número
+
