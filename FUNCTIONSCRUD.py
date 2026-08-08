@@ -18,11 +18,9 @@ def listar_produtos(estoque):
             print(f'Quantidade: {produto['quantidade']}\n' )
 
 def buscar_produto(estoque, nome):
-
-    print('**BUSCAR PRODUTO**')
     
     for produto in estoque:
-        if produto['nome'].upper() == nome:
+        if produto['nome'].upper() == nome.upper():
             return produto
         
     print('Produto não encontrado!')
@@ -34,8 +32,21 @@ def cadastrar_produto(estoque):
     print('**CADASTRAR PRODUTO**')
 
     nome = input('Nome do produto: ')
-    preco = float(input('Preço: '))
-    quantidade = int(input('Quantidade: '))
+    while True:
+        try:
+            preco = float(input('Preço: '))
+            break
+        except ValueError:
+            print('Entrada invalida')
+    while True:
+        try:
+            quantidade = int(input('Quantidade: '))
+            if quantidade < 0:
+                print('O valor não pode ser negativo')
+                continue
+            break
+        except ValueError:
+            print('Valor invalido')
 
     produto = {
           'nome': nome,
@@ -65,6 +76,27 @@ def remover_produto(estoque):
 
 def editar_produto(estoque):
 
-    print('**ATUALIZAR PRODUTO**')
+    print('**EDITAR PRODUTO**')
 
-    buscar_produto()
+    nome = input('Qual produto deseja editar?')
+
+    produto = buscar_produto(estoque, nome)
+
+    if produto:
+
+        print('Produto encontrado')
+
+        novo_preco = float(input('Digite o novo preço: '))
+        nova_quantidade = int(input('Digite a nova quantidade: '))
+
+        produto['preco'] = novo_preco
+        produto['quantidade'] = nova_quantidade
+
+        print('Produto atualizado com sucesso!')
+
+        listar_produtos(estoque)
+
+    else:
+
+        print('Produto não encontrado')
+
