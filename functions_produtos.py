@@ -23,7 +23,7 @@ def buscar_produto(estoque, nome):
         if produto['nome'].upper() == nome.upper():
             return produto
         
-    print('Produto não encontrado!')
+    print('\nProduto não encontrado!')
     return None
 
 
@@ -66,36 +66,67 @@ def cadastrar_produto(estoque):
 
 def remover_produto(estoque):
      
-    print('**REMOVER PRODUTO**')
+    print('**REMOVER PRODUTO**\n')
+
+    if not estoque:
+        print('\nNão há nenhum item para ser removido. ')
+        return
+            
 
     encontrado = False
-     
-    nome = input('Qual produto deseja remover? ').upper()
+    while True: 
+        nome = input('Qual produto deseja remover? ').upper()
+        if nome == '':
+            print('Este campo não pode ficar vazio.')
+            continue
+        break
 
     for produto in estoque:
         if produto['nome'].upper() == nome:
             encontrado = True
             estoque.remove(produto) 
-            print('Produto removido com sucesso!')
+            print('\nProduto removido com sucesso!')
             break
 
     if not encontrado:
-        print('Produto não encontrado no estoque')
+        print('\nProduto não encontrado no estoque')
 
 def editar_produto(estoque):
 
-    print('**EDITAR PRODUTO**')
+    print('**EDITAR PRODUTO**\n')
 
-    nome = input('Qual produto deseja editar?')
+    while True:
+
+        nome = input('Qual produto deseja editar? ')
+        if nome =='':
+            print('Este campo não pode ficar vazio.')
+            continue
+        break
 
     produto = buscar_produto(estoque, nome)
 
     if produto:
 
         print('Produto encontrado')
+        while True:
+            try:
+                novo_preco = float(input('Digite o novo preço: '))
 
-        novo_preco = float(input('Digite o novo preço: '))
-        nova_quantidade = int(input('Digite a nova quantidade: '))
+                if novo_preco < 0:
+                    print('O valor não pode ser negativo!')
+                    continue
+                break
+            except ValueError:
+                print('Entrada invalida')
+        while True:
+            try:    
+                nova_quantidade = int(input('Digite a nova quantidade: '))
+                if nova_quantidade < 0:
+                    print('O valor não pode ser negativo')
+                    continue
+                break
+            except ValueError:
+                print('Entrada invalida!')
 
         produto['preco'] = novo_preco
         produto['quantidade'] = nova_quantidade
@@ -104,7 +135,4 @@ def editar_produto(estoque):
 
         listar_produtos(estoque)
 
-    else:
-
-        print('Produto não encontrado')
 

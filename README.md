@@ -53,34 +53,37 @@ Modelagem de dados:
 Teste de funções CRUD
 
 ** Cadastro
-nome vazio (work in progress)
-preço inválido
-preço negativo
-quantidade inválida
-quantidade negativa
+nome vazio - Ok
+preço inválido - Ok
+preço negativo - Ok
+quantidade inválida - Ok
+quantidade negativa - Ok
 
 ** Busca
-produto existente
-produto inexistente
-maiúsculas/minúsculas
-entrada vazia
+produto existente - Ok
+produto inexistente - Ok
+maiúsculas/minúsculas - Ok
+entrada vazia - Ok
 
 ** Edição
-produto existente
-produto inexistente
-preço/quantidade inválidos
+produto existente - Ok
+produto inexistente - Ok
+preço/quantidade inválidos - Ok
+entrada vazia - Ok
 
 ** Remoção
-existente
-inexistente
-estoque vazio
+existente - Ok
+inexistente - Ok
+estoque vazio - OK
+entrada vazia - Ok
 
 ** Listagem
-estoque com produtos
-estoque vazio
+estoque com produtos - Ok
+estoque vazio - Ok
 
 ** Menu
-opção válida
-opção inexistente
-entrada que não seja número
+opção válida - Ok
+opção inexistente - Ok
+entrada que não seja número - Ok
+entrada vazia - Ok
 
