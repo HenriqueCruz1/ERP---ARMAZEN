@@ -26,23 +26,21 @@ def menu():
         if escolha_menu == 1:
              listar_produtos(estoque)
         elif escolha_menu == 2:
-               print('**BUSCAR PRODUTO**\n')
-               
-               while True:
+          print('**BUSCAR PRODUTO**\n')
 
-                    nome = input('Qual produto quer buscar? ')
-                    if nome =='':
-                         print('Este campo não pode ficar vazio')
-                         continue
-                    break
+          nome = input('Qual produto quer buscar? ')
+          if nome =='':
+               print('Este campo não pode ficar vazio')
 
-               produto = buscar_produto(estoque, nome)
+          produto = buscar_produto(estoque, nome)
 
-               if produto:
-                    print(f"\nProduto: {produto['nome']}")
-                    print(f"Preço: {produto['preco']}")
-                    print(f"Quantidade: {produto['quantidade']}\n")
-
+        if produto:
+            print(f"\nProduto: {produto['nome']}")
+            print(f"Preço: {produto['preco']}")
+            print(f"Quantidade: {produto['quantidade']}\n")
+        if not produto:
+            print('Produto não encontrado.')
+            
         elif escolha_menu == 3:
              cadastrar_produto(estoque)
         elif escolha_menu == 4:

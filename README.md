@@ -1,12 +1,10 @@
-Definição do que é?
+**Definição do que é?
 
-DEFINIÇÃO:
+Projeto inicialmente para estudos mas com possibilidade de crescer e virar uma aplicação real a longo prazo;
 
-Sistema de gestão que faz a intregração de inicialmente 3 modulos:
+**Sobre a aplicação:
 
- => ESTOQUE
- => COMPRAS
- => FINANCEIRO  
+Estrutura baseada em um ERP, o foco no momento é criar a estrutura de estoque [12/08/2026]
 
 Documentação do processo de criação na tela de login.
 
@@ -86,4 +84,36 @@ opção válida - Ok
 opção inexistente - Ok
 entrada que não seja número - Ok
 entrada vazia - Ok
+
+Testes feitos.
+
+** Nova etapa do projeto - PostgreSQL
+
+Acessar postgre pelo terminal: sudo -u postgres psql
+
+CREATE DATABASE erp; - (criei um banco de dados chamado erp)
+
+- acesse o banco usando \c erp no terminal enquanto estiver conectado ao psql
+- vamos criar nossa primeira tabela, o psql não vai aceitar se ela estiver vazia, então o passo a passo segue:
+
++ CREATE TABLE produtos (
+        nome VARCHAR(100) (no terminal são 4 espaços ou nenhum)
+);
+
+++ Criamos a tabela 'produtos' que recebe uma coluna chamada nome, que em cada linha podem ser escritos até 100 caracteres.
++++ Visualize a tabela com o comando \dt
+
+** INSERINDO VALORES A TABELA
+Vamos inserir um produto na ta tabela;
+
+INSERT INTO produtos (nome)
+VALUES ('Notebook) no terminal se pode escrever tudo em uma linha só que o sistema aceita.
+
+** INSERINDO UMA NOVA COLUNA.
+vamos inserir uma nova coluna na tabela;
+comando: ALTER TABLE produtos ADD preco NUMERIC(100)
+
+
+
+
 

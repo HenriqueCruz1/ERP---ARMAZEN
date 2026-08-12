@@ -18,14 +18,12 @@ def listar_produtos(estoque):
             print(f'Quantidade: {produto['quantidade']}\n' )
 
 def buscar_produto(estoque, nome):
-    
-    for produto in estoque:
-        if produto['nome'].upper() == nome.upper():
-            return produto
         
-    print('\nProduto não encontrado!')
-    return None
+        for produto in estoque:
+            if produto['nome'].upper() == nome.upper():
+                return produto
 
+        return None
 
 def cadastrar_produto(estoque):
 
@@ -99,9 +97,10 @@ def editar_produto(estoque):
 
         nome = input('Qual produto deseja editar? ')
         if nome =='':
-            print('Este campo não pode ficar vazio.')
+            print('\nEste campo não pode ficar vazio.\n')
             continue
         break
+
 
     produto = buscar_produto(estoque, nome)
 
