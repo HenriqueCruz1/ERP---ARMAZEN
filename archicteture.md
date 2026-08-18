@@ -10,7 +10,7 @@ Oque deve ter:
 
 - Sistema de armazenamento.
     - Produtos da empresa.
-        - Nome/ quantidade/ valor/ movimentação(Compra de novos produtos/Venda)
+        - Nome/ quantidade/ valor (Ok)
     -Cadastro de Usuarios.
         - Nome/Senha.
     -Cadastro de Clientes.

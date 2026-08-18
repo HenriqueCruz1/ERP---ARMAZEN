@@ -46,8 +46,6 @@ Modelagem de dados:
 
 + Quando a função só executa uma tarefa dentro do sistema (exp: atualiza ou remove um dado) use uma condicional true/false para a execução da ação.
 
-++ Task's of the day
-
 Teste de funções CRUD
 
 ** Cadastro
@@ -85,9 +83,7 @@ opção inexistente - Ok
 entrada que não seja número - Ok
 entrada vazia - Ok
 
-Testes feitos.
-
-** Nova etapa do projeto - PostgreSQL
+** PostgreSQL
 
 Acessar postgre pelo terminal: sudo -u postgres psql
 
@@ -112,6 +108,10 @@ VALUES ('Notebook) no terminal se pode escrever tudo em uma linha só que o sist
 ** INSERINDO UMA NOVA COLUNA.
 vamos inserir uma nova coluna na tabela;
 comando: ALTER TABLE produtos ADD preco NUMERIC(100)
+
+- Codificando o sistema de usuarios.
+
+- Divisão do menu e suas funções cada um em seu arquivo.
 
 
 
