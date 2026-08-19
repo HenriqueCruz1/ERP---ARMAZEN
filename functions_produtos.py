@@ -1,21 +1,33 @@
+from database import conectar
+
 estoque = [
     {"nome": "Notebook", "preco": 3500, "quantidade": 8},
     {"nome": "Mouse", "preco": 80, "quantidade": 20}
 ]
 
-def listar_produtos(estoque):
+def listar_produtos():
 
     print('**LISTAR PRODUTOS**')
 
-    if not estoque:
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor. execute ("SELECT nome, preco, quantidade FROM produtos")
+
+    produtos = cursor.fetchall()
+
+    if not produtos:
         print('Não há informações para serem exibidas.')
 
     else:
 
-        for produto in estoque:
-            print(f'\nProduto: {produto['nome']}' )
-            print(f'Preço: {produto['preco']}' )
-            print(f'Quantidade: {produto['quantidade']}\n' )
+        for produto in produtos:
+            print(f'\nProduto: {produto[0]}' )
+            print(f'Preço: {produto[1]}' )
+            print(f'Quantidade: {produto[2]}\n' )
+
+    cursor.close()
+    conexao.close()
 
 def buscar_produto(estoque, nome):
         

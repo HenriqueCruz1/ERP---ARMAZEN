@@ -113,6 +113,33 @@ comando: ALTER TABLE produtos ADD preco NUMERIC(100)
 
 - Divisão do menu e suas funções cada um em seu arquivo.
 
+-- Iniciando frontend para começar testes --
+
+- Finalizar a integração com o SQl
+* Vamos usar o psycopg3 - é uma biblioteca qu conversa com o postgre
+pip install psycopg
+
+Arquivos futuros:
+
+produtos.py
+clientes.py
+vendas.py
+estoque.py
+fornecedores.py
+database.py - responsavel pela conexão
+
+defina a senha do SQL pelo terminal:
+\password postgres
+Informações da porta do banco de dados:
+\conninfo
+
+
+
+
+
+
+
+
 
 
 

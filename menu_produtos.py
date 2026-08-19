@@ -24,7 +24,7 @@ def menu():
              continue
 
         if escolha_menu == 1:
-             listar_produtos(estoque)
+             listar_produtos()
         elif escolha_menu == 2:
           print('**BUSCAR PRODUTO**\n')
 

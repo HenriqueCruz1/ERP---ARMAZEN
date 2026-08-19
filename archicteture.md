@@ -21,6 +21,3 @@ Oque deve ter:
             -Qual valor/quantidade.
             - Qual cliente.
     - Apresentação de dados.
-
-
-
