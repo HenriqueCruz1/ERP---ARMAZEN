@@ -133,6 +133,21 @@ defina a senha do SQL pelo terminal:
 Informações da porta do banco de dados:
 \conninfo
 
+Tasks of day
+
+** Alterar as funções trocando o banco de dados para SQL **
+
++ Listar produtos (Ok)
++ Buscar produto (Ok)
++ Cadastrar produto (Ok)
++ Remover produto (Ok)
++ Editar produto (Ok)
+
+## Deixar tudo comentado
+
+** Iniciar frontend - Html, css, javascript.
+
+
 
 
 

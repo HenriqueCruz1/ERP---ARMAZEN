@@ -32,21 +32,21 @@ def menu():
           if nome =='':
                print('Este campo não pode ficar vazio')
 
-          produto = buscar_produto(estoque, nome)
+          produto = buscar_produto(nome)
 
-        if produto:
-            print(f"\nProduto: {produto['nome']}")
-            print(f"Preço: {produto['preco']}")
-            print(f"Quantidade: {produto['quantidade']}\n")
-        if not produto:
+          if produto:
+            print(f"\nProduto: {produto[0]}")
+            print(f"Preço: {produto[1]}")
+            print(f"Quantidade: {produto[2]}\n")
+          else:
             print('Produto não encontrado.')
             
         elif escolha_menu == 3:
-             cadastrar_produto(estoque)
+             cadastrar_produto()
         elif escolha_menu == 4:
-             remover_produto(estoque)
+             remover_produto()
         elif escolha_menu == 5:
-            editar_produto(estoque)
+               editar_produto()
         elif escolha_menu == 6:
             print('Saindo..')
             break
