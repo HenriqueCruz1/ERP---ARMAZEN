@@ -1,7 +1,46 @@
 body {
-    background-color: lightgray;
+    background-color: #f2f2f2;
 }
 
 h1 {
-    color: blue;
+    color: red; 
+    font-size: 50px;
 }
+
+h2 {
+    color: purple;
+    font-size: 30px;
+}
+
+table {
+    background-color: lightblue;
+    width: 800px;
+    height: 250px;
+
+    border: 2px solid black; 
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: lightskyblue;
+    font-family: Impact,'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+
+    border: 1px solid black;
+    padding: 20px ;
+    text-align: center ;
+    width: 200px;
+}
+
+td {
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    width: 200px;
+
+    border: 1px solid black; 
+    padding: 10px;
+}
+
