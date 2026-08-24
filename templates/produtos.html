@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produtos</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <main>
+        <h1>ERP ARMAZEN</h1>
+        <section>
+            <h2>Produtos</h2>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+                <tr>
+                    <td>Notebook</td>
+                    <td>4000</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>120</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Teclado</td>
+                    <td>250</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Cadastrar Produto</h2>
+            <form>
+
+                <label for="nome">Nome:</label>
+                <input
+                    type="text"
+                    id="nome" 
+                    name="nome"
+                    placeholder="Insira o nome do produto"
+                 >
+                 <br>
+
+                <label for="preco">Preço:</label>
+                <input
+                    type="number"
+                    id="preco"
+                    name="preco"
+                    placeholder="Insira o preço do produto"
+                >
+                <br>
+
+                <label for="quantidade">Quantidade:</label>
+                <input
+                type="number"
+                id="quantidade"
+                name="quantidade"
+                placeholder="Insira a quantidade do produto"
+                >
+                <br>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        Software desenvolvido por Matheus Henrique
+    </footer>
+</body>
+</html>
