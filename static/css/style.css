@@ -9,16 +9,24 @@ h1 {
 }
 
 h2 {
+    margin-right: 80px;
+    text-align: end;
     color: darkblue;
     font-size: 30px;
     font-family:Arial, Helvetica, sans-serif;
     font-style: oblique;
 }
 
+.tabela{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
 table {
     border-radius: 10px;
     background-color: lightblue;
-    width: 800px;
+    width: 400px;
     height: 250px;
 
     border: 2px solid black; 
@@ -42,7 +50,6 @@ th{
 td:hover{
     background-color: whitesmoke;
     font-weight: bold;
-    cursor: pointer;
 }
 
 td {
@@ -51,23 +58,37 @@ td {
     font-weight: normal;
     text-align: center;
     width: 200px;
-
     border: 1px solid black; 
     transition: 0.3s;
 }
 
 button{
+    width: 200px;
     padding: 10px 20px;
     border-radius: 8px;
     background-color: lightgray;
     color: black;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s;
 }
 
 button:hover{
     background-color: lightsteelblue;
-    display: inline-block;
-    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.formulario{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
 }
 
