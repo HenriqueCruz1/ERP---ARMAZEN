@@ -1,4 +1,4 @@
-from app.database import conectar
+from database import conectar
 
 def listar_produtos():
 

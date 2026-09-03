@@ -1,4 +1,4 @@
-from app.functions_produtos import *
+from functions_produtos import *
 
 def menu():
 
