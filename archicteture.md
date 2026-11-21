@@ -21,3 +21,11 @@ Oque deve ter:
             -Qual valor/quantidade.
             - Qual cliente.
     - Apresentação de dados.
+
+    Task;
+Menu recebe informação
+Produto cria o saldo
+Validator valida a entrada
+Service não sei
+repository não sei
+PostgreSQL armazena o valor

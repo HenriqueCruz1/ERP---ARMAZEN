@@ -1,106 +1,238 @@
+/* ==========================================================================
+   Tema inspirado no TOTVS Protheus
+   Barra superior escura, fundo cinza claro, painéis brancos, azul-petróleo
+   como cor de destaque e grid de dados com cabeçalho cinza-azulado.
+   ========================================================================== */
+
+:root {
+    /* Paleta */
+    --cor-topo: #0d3b4f;
+    --cor-primaria: #0c9abe;
+    --cor-primaria-escura: #0a7d9a;
+    --cor-perigo: #c0392b;
+    --cor-perigo-escura: #a32f23;
+
+    --cor-fundo: #eef1f4;
+    --cor-painel: #ffffff;
+    --cor-borda: #d5dbe0;
+    --cor-borda-input: #b8c2c9;
+
+    --cor-texto: #2f3b43;
+    --cor-titulo: #1d3a47;
+    --cor-cabecalho-tabela: #e6edf1;
+    --cor-linha-par: #f7f9fa;
+    --cor-linha-hover: #e3f4f9;
+
+    /* Medidas */
+    --espaco-pagina: 32px;
+    --raio: 4px;
+    --sombra: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --fonte: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ---------- Base ---------- */
 body {
-    background-color: lightcyan;
+    margin: 0;
+    padding: 0 var(--espaco-pagina) 32px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte);
+    font-size: 14px;
+    line-height: 1.5;
 }
 
+/* ---------- Títulos ---------- */
+/* h1: barra superior em largura total (como o topo do Protheus) */
 h1 {
-    color: darkblue; 
-    font-size: 50px;
-    font-style: italic;
+    margin: 0 calc(-1 * var(--espaco-pagina)) 24px;
+    padding: 16px var(--espaco-pagina);
+    background-color: var(--cor-topo);
+    border-bottom: 4px solid var(--cor-primaria);
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
-h2 {
-    margin-right: 80px;
-    text-align: end;
-    color: darkblue;
-    font-size: 30px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: oblique;
-}
-
+/* h2 e h3: títulos de seção, agora com o mesmo estilo e alinhamento */
+h2,
 h3 {
-    margin-right: 80px;
+    margin: 0 0 12px;
+    padding-left: 10px;
+    border-left: 4px solid var(--cor-primaria);
+    color: var(--cor-titulo);
+    font-size: 16px;
+    font-weight: 600;
     text-align: start;
-    color: darkblue;
-    font-size: 30px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: oblique;
-
 }
 
-.tabela{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+/* ---------- Layout: formulário à esquerda, tabela à direita ---------- */
+.container {
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    gap: 24px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+/* ---------- Painéis (formulário e tabela) ---------- */
+.formulario,
+.tabela {
+    background-color: var(--cor-painel);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.formulario {
+    padding: 20px;
+}
+
+.tabela {
+    overflow-x: auto; /* tabelas largas rolam dentro do painel */
+}
+
+/* ---------- Campos de formulário ---------- */
+label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--cor-titulo);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 9px 12px;
+    border: 1px solid var(--cor-borda-input);
+    border-radius: var(--raio);
+    background-color: #ffffff;
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(12, 154, 190, 0.2);
+}
+
+/* ---------- Tabela (grid de dados) ---------- */
 table {
-    background-color: lightblue;
-    width: 400px;
-    height: 250px;
-    border: 2px solid black; 
+    width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 0 10px gray;
+    background-color: var(--cor-painel);
 }
 
-th{
-    background-color: lightskyblue;
-    font-family: Impact,'Arial Narrow Bold', sans-serif;
-    font-weight: bold;
-
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 20px ;
-    text-align: center ;
-    width: 200px;
+th,
+td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
 }
 
-td:hover{
-    background-color: whitesmoke;
-    font-weight: bold;
+th {
+    background-color: var(--cor-cabecalho-tabela);
+    border-bottom: 2px solid var(--cor-primaria);
+    color: var(--cor-titulo);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 td {
-    padding: 10px 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: normal;
-    text-align: center;
-    width: 200px;
-    border: 1px solid black; 
-    transition: 0.3s;
+    transition: background-color 0.2s;
 }
 
-button{
-    width: 200px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: lightgray;
-    color: black;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    transition: 0.3s;
-    display: flex;
+tbody tr:nth-child(even) {
+    background-color: var(--cor-linha-par);
 }
 
-button:hover{
-    background-color: lightsteelblue;
+tbody tr:hover td {
+    background-color: var(--cor-linha-hover);
+}
+
+/* ---------- Botões ---------- */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 140px;
+    padding: 10px 20px;
+    border: 1px solid var(--cor-primaria-escura);
+    border-radius: var(--raio);
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-.formulario{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 40px;
-    margin-bottom: 10px;
+button:hover {
+    background-color: var(--cor-primaria-escura);
 }
 
-.container{
-    display: flex;
-    justify-content: flex-start;
-    gap: 250px;
+button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(12, 154, 190, 0.35);
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Variações opcionais: <button class="secundario"> / <button class="perigo"> */
+button.secundario {
+    background-color: #ffffff;
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria-escura);
+}
+
+button.secundario:hover {
+    background-color: var(--cor-linha-hover);
+}
+
+button.perigo {
+    background-color: var(--cor-perigo);
+    border-color: var(--cor-perigo-escura);
+}
+
+button.perigo:hover {
+    background-color: var(--cor-perigo-escura);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+    :root {
+        --espaco-pagina: 16px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}
