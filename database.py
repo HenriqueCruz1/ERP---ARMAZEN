@@ -4,6 +4,6 @@ def conectar():
     return psycopg.connect(
         dbname="erp",
         user="postgres",
-        password="Mh1*4*7*",
+        password="######",
         host="localhost"
     )
